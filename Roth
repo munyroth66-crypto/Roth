@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>មុន្នីរ័ត្ន ♥ វឌ្ឍនៈ | The Wedding Invitation</title>
+
+  <meta name="description"
+        content="សិរីសួស្តីអាពាហ៍ពិពាហ៍ មុន្នីរ័ត្ន & វឌ្ឍនៈ — 19 November 2026">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Khmer:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #fbf6ee;
+      --paper: #fffdf9;
+      --gold: #b08a52;
+      --gold-light: #d9c6a5;
+      --brown: #4b4037;
+      --soft: #75685c;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--brown);
+      font-family: "Noto Serif Khmer", serif;
+      line-height: 1.9;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 760px;
+      margin: auto;
+    }
+
+    /* COVER */
+
+    .cover {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left,
+          rgba(176,138,82,.12),
+          transparent 35%),
+        radial-gradient(circle at bottom right,
+          rgba(176,138,82,.10),
+          transparent 35%),
+        var(--cream);
+    }
+
+    .cover::before,
+    .cover::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border: 1px solid var(--gold-light);
+      border-radius: 50%;
+      opacity: .5;
+    }
+
+    .cover::before {
+      top: -90px;
+      left: -90px;
+    }
+
+    .cover::after {
+      bottom: -90px;
+      right: -90px;
+    }
+
+    .cover-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeUp 1.2s ease;
+    }
+
+    .small-title {
+      font-size: 15px;
+      letter-spacing: 2px;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .english {
+      font-family: "Playfair Display", serif;
+      font-size: 17px;
+      letter-spacing: 3px;
+      color: var(--soft);
+      margin-bottom: 35px;
+    }
+
+    .names {
+      font-size: 38px;
+      font-weight: 600;
+      color: var(--brown);
+    }
+
+    .heart {
+      color: var(--gold);
+      font-size: 30px;
+      margin: 8px 0;
+    }
+
+    .names-en {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: var(--soft);
+      margin-top: 8px;
+    }
+
+    .divider {
+      width: 90px;
+      height: 1px;
+      background: var(--gold-light);
+      margin: 30px auto;
+    }
+
+    .date {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    .date-en {
+      font-family: "Playfair Display", serif;
+      font-size: 17px;
+      margin-top: 5px;
+      color: var(--soft);
+    }
+
+    .location-mini {
+      font-size: 14px;
+      margin-top: 20px;
+      color: var(--soft);
+    }
+
+    .scroll {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      color: var(--gold);
+      animation: bounce 2s infinite;
+    }
+
+    /* SECTIONS */
+
+    .section {
+      background: var(--paper);
+      margin: 18px auto;
+      border-radius: 28px;
+      box-shadow: 0 10px 40px rgba(70, 50, 30, .05);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 25px;
+      font-weight: 600;
+      color: var(--brown);
+    }
+
+    .section-title p {
+      font-family: "Playfair Display", serif;
+      font-size: 14px;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+
+    /* INVITATION */
+
+    .invitation {
+      text-align: center;
+    }
+
+    .invitation-intro {
+      font-size: 20px;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .invitation p {
+      font-size: 15px;
+      color: var(--soft);
+    }
+
+    /* BLESSING */
+
+    .blessing {
+      text-align: center;
+    }
+
+    .quote {
+      font-size: 16px;
+      color: var(--soft);
+    }
+
+    /* FAMILY */
+
+    .family {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .family-box {
+      text-align: center;
+      padding: 25px 12px;
+      border: 1px solid var(--gold-light);
+      border-radius: 20px;
+    }
+
+    .family-title {
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .family-box p {
+      font-size: 14px;
+      color: var(--soft);
+    }
+
+    .couple-name {
+      margin-top: 12px;
+      font-size: 17px;
+      color: var(--brown);
+      font-weight: 600;
+    }
+
+    /* COUNTDOWN */
+
+    .countdown {
+      text-align: center;
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 25px;
+    }
+
+    .time-box {
+      padding: 18px 5px;
+      background: var(--cream);
+      border-radius: 16px;
+    }
+
+    .time-number {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      color: var(--gold);
+    }
+
+    .time-label {
+      font-size: 12px;
+      color: var(--soft);
+    }
+
+    /* PROGRAM */
+
+    .program-item {
+      display: flex;
+      gap: 18px;
+      padding: 20px 0;
+      border-bottom: 1px solid #eee5d9;
+    }
+
+    .program-item:last-child {
+      border-bottom: none;
+    }
+
+    .program-time {
+      min-width: 85px;
+      font-family: "Playfair Display", serif;
+      color: var(--gold);
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .program-name {
+      font-size: 15px;
+      color: var(--soft);
+    }
+
+    /* LOCATION */
+
+    .location {
+      text-align: center;
+    }
+
+    .location-address {
+      color: var(--soft);
+      margin-bottom: 25px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      background: transparent;
+      font-family: inherit;
+      font-size: 14px;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: var(--gold);
+      color: white;
+    }
+
+    /* LOVE NOTE */
+
+    .love-note {
+      text-align: center;
+    }
+
+    .love-note-text {
+      font-family: "Playfair Display", serif;
+      font-size: 19px;
+      line-height: 2;
+      color: var(--soft);
+    }
+
+    /* THANK YOU */
+
+    .thank-you {
+      text-align: center;
+      padding-bottom: 90px;
+    }
+
+    .thank-you .heart {
+      font-size: 35px;
+    }
+
+    .thank-you h2 {
+      font-size: 28px;
+    }
+
+    .thank-you p {
+      color: var(--soft);
+      margin-top: 10px;
+    }
+
+    .footer-names {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      margin-top: 25px;
+      color: var(--gold);
+    }
+
+    /* ANIMATION */
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translate(-50%, 0);
+      }
+
+      40% {
+        transform: translate(-50%, -8px);
+      }
+
+      60% {
+        transform: translate(-50%, -4px);
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 55px 15px;
+      }
+
+      .names {
+        font-size: 32px;
+      }
+
+      .family {
+        gap: 10px;
+      }
+
+      .countdown-grid {
+        gap: 5px;
+      }
+
+      .time-number {
+        font-size: 23px;
+      }
+
+      .program-time {
+        min-width: 70px;
+        font-size: 14px;
+      }
+
+      .program-name {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- COVER -->
+
+  <section class="cover">
+
+    <div class="cover-content">
+
+      <div class="small-title">
+        សិរីសួស្តីអាពាហ៍ពិពាហ៍
+      </div>
+
+      <div class="english">
+        THE WEDDING INVITATION
+      </div>
+
+      <div class="names">
+        មុន្នីរ័ត្ន
+      </div>
+
+      <div class="heart">
+        ♥
+      </div>
+
+      <div class="names">
+        វឌ្ឍនៈ
+      </div>
+
+      <div class="names-en">
+        An Muniroth & Bun Vathanak
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="date">
+        ១៩ វិច្ឆិកា ២០២៦
+      </div>
+
+      <div class="date-en">
+        Thursday · November 19, 2026
+      </div>
+
+      <div class="location-mini">
+        ភូមិអំពិលកើត ឃុំចារ<br>
+        ស្រុកព្រៃកប្បាស ខេត្តតាកែវ
+      </div>
+
+    </div>
+
+    <div class="scroll">
+      ↓ រំកិលចុះ
+    </div>
+
+  </section>
+
+
+  <main class="container">
+
+    <!-- INVITATION -->
+
+    <section class="section invitation">
+
+      <div class="section-title">
+        <p>WITH JOY & LOVE</p>
+        <h2>សូមគោរពអញ្ជើញ</h2>
+      </div>
+
+      <div class="invitation-intro">
+        មុន្នីរ័ត្ន & វឌ្ឍនៈ
+      </div>
+
+      <p>
+        សូមគោរពអញ្ជើញ លោក លោកស្រី អ្នកនាង កញ្ញា
+        និងភ្ញៀវកិត្តិយសទាំងអស់
+        អញ្ជើញចូលរួមក្នុងពិធីមង្គលការរបស់យើងខ្ញុំ។
+      </p>
+
+      <br>
+
+      <p>
+        ពិធីមង្គលការនឹងប្រព្រឹត្តទៅនៅថ្ងៃ
+        <strong>ព្រហស្បតិ៍ ទី១៩ ខែវិច្ឆិកា ឆ្នាំ២០២៦</strong>
+        ត្រូវនឹងថ្ងៃ ១០កើត ខែកត្តិក ឆ្នាំមមី អដ្ឋស័ក
+        ព.ស. ២៥៧០។
+      </p>
+
+    </section>
+
+
+    <!-- BLESSING -->
+
+    <section class="section blessing">
+
+      <div class="section-title">
+        <p>BLESSING</p>
+        <h2>សូមប្រសិទ្ធពរជ័យ</h2>
+      </div>
+
+      <div class="quote">
+
+        សូមប្រសិទ្ធពរជ័យ សិរីសួស្តី និងជ័យមង្គល
+        ក្នុងថ្ងៃមង្គលការរបស់អ្នកទាំងពីរ។
+
+        <br><br>
+
+        សូមឱ្យសេចក្តីស្រឡាញ់របស់អ្នកទាំងពីរ
+        ស្ថិតស្ថេរយូរអង្វែង ចាប់ដៃគ្នាឆ្លងកាត់គ្រប់ឧបសគ្គ
+        និងរួមរស់ជាមួយគ្នាប្រកបដោយសុភមង្គល។
+
+        <br><br>
+
+        សូមឱ្យជីវិតគូពោរពេញដោយ
+        ក្តីស្រឡាញ់ សុខភាពល្អ សំណាងល្អ
+        ភាពរុងរឿង និងភាពជោគជ័យ។
+
+        <br><br>
+
+        សូមឱ្យគ្រួសារថ្មីនេះ មានតែស្នាមញញឹម
+        សេចក្តីសុខ និងភាពកក់ក្តៅជានិច្ច។
+
+      </div>
+
+    </section>
+
+
+    <!-- FAMILY -->
+
+    <section class="section">
+
+      <div class="section-title">
+        <p>OUR FAMILIES</p>
+        <h2>ក្រុមគ្រួសារ</h2>
+      </div>
+
+      <div class="family">
+
+        <div class="family-box">
+
+          <div class="family-title">
+            កូនកំលោះ
+          </div>
+
+          <p>លោក អាន ម៉ាលី</p>
+          <p>លោកស្រី អ៊ុត ពៅ</p>
+
+          <div class="couple-name">
+            អាន មុន្នីរ័ត្ន
+          </div>
+
+        </div>
+
+        <div class="family-box">
+
+          <div class="family-title">
+            កូនក្រមុំ
+          </div>
+
+          <p>លោក ប៊ុន ឡា (គ្រូសាំង)</p>
+          <p>លោកស្រី ស៊ឹង គឹមហ៊ង</p>
+
+          <div class="couple-name">
+            ប៊ុន វឌ្ឍនៈ
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- COUNTDOWN -->
+
+    <section class="section countdown">
+
+      <div class="section-title">
+        <p>COUNTDOWN</p>
+        <h2>រាប់ថយក្រោយ</h2>
+      </div>
+
+      <div class="countdown-grid">
+
+        <div class="time-box">
+          <div class="time-number" id="days">00</div>
+          <div class="time-label">ថ្ងៃ</div>
+        </div>
+
+        <div class="time-box">
+          <div class="time-number" id="hours">00</div>
+          <div class="time-label">ម៉ោង</div>
+        </div>
+
+        <div class="time-box">
+          <div class="time-number" id="minutes">00</div>
+          <div class="time-label">នាទី</div>
+        </div>
+
+        <div class="time-box">
+          <div class="time-number" id="seconds">00</div>
+          <div class="time-label">វិនាទី</div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROGRAM -->
+
+    <section class="section">
+
+      <div class="section-title">
+        <p>WEDDING PROGRAM</p>
+        <h2>កម្មវិធី</h2>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">07:00</div>
+        <div class="program-name">
+          ពិធីហែជំនូន
+        </div>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">08:30</div>
+        <div class="program-name">
+          ពិធីកាត់សក់បង្កក់សិរី
+        </div>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">10:30</div>
+        <div class="program-name">
+          ពិធីសែនចងដៃ និងសំពះផ្ទឹម
+        </div>
+      </div>
+
+      <div class="program-item">
+        <div class="program-time">05:00 PM</div>
+        <div class="program-name">
+          ភ្ញៀវកិត្តិយសពិសារភោជនាហារ
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- LOCATION -->
+
+    <section class="section location">
+
+      <div class="section-title">
+        <p>LOCATION</p>
+        <h2>ទីតាំង</h2>
+      </div>
+
+      <div class="location-address">
+
+        ភូមិអំពិលកើត ឃុំចារ<br>
+        ស្រុកព្រៃកប្បាស ខេត្តតាកែវ
+
+      </div>
+
+      <div class="button-group">
+
+        <a
+          class="btn"
+          href="https://www.google.com/maps/search/?api=1&query=ភូមិអំពិលកើត%20ឃុំចារ%20ស្រុកព្រៃកប្បាស%20ខេត្តតាកែវ"
+          target="_blank">
+          📍 បើក Google Maps
+        </a>
+
+        <button class="btn" onclick="addCalendar()">
+          📅 រក្សាទុកក្នុងប្រតិទិន
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- LOVE NOTE -->
+
+    <section class="section love-note">
+
+      <div class="section-title">
+        <p>OUR LOVE STORY</p>
+        <h2>កំណត់ត្រាស្នេហា</h2>
+      </div>
+
+      <div class="love-note-text">
+
+        “សេចក្តីស្រឡាញ់មិនមែនជាការស្វែងរកមនុស្សល្អឥតខ្ចោះទេ
+        ប៉ុន្តែជាការរកឃើញមនុស្សម្នាក់
+        ដែលយើងចង់កាន់ដៃ និងដើរជាមួយគ្នាពេញមួយជីវិត។”
+
+      </div>
+
+    </section>
+
+
+    <!-- SHARE -->
+
+    <section class="section location">
+
+      <div class="section-title">
+        <p>SHARE OUR JOY</p>
+        <h2>ចំណងដៃ</h2>
+      </div>
+
+      <p style="color:#75685c;">
+        សូមអរគុណចំពោះក្តីស្រឡាញ់
+        និងការចូលរួមរបស់លោកអ្នក។
+      </p>
+
+      <br>
+
+      <div class="button-group">
+
+        <button class="btn" onclick="shareWedding()">
+          💌 ផ្ញើការអញ្ជើញ
+        </button>
+
+        <button class="btn" onclick="copyLink()">
+          🔗 ចម្លងតំណភ្ជាប់
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- THANK YOU -->
+
+    <section class="thank-you">
+
+      <div class="heart">
+        ♥
+      </div>
+
+      <h2>
+        សូមអរគុណ
+      </h2>
+
+      <p>
+        សូមអរគុណចំពោះក្តីស្រឡាញ់
+        និងពរជ័យដ៏មានតម្លៃរបស់លោកអ្នក។
+      </p>
+
+      <div class="footer-names">
+        មុន្នីរ័ត្ន ♥ វឌ្ឍនៈ
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    /* COUNTDOWN */
+
+    const weddingDate =
+      new Date("2026-11-19T07:00:00+07:00").getTime();
+
+    function updateCountdown() {
+
+      const now = new Date().getTime();
+
+      const distance = weddingDate - now;
+
+      if (distance <= 0) {
+
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+
+        return;
+      }
+
+      const days =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
+
+      const hours =
+        Math.floor(
+          (distance % (1000 * 60 * 60 * 24))
+          / (1000 * 60 * 60)
+        );
+
+      const minutes =
+        Math.floor(
+          (distance % (1000 * 60 * 60))
+          / (1000 * 60)
+        );
+
+      const seconds =
+        Math.floor(
+          (distance % (1000 * 60))
+          / 1000
+        );
+
+      document.getElementById("days").innerText =
+        String(days).padStart(2, "0");
+
+      document.getElementById("hours").innerText =
+        String(hours).padStart(2, "0");
+
+      document.getElementById("minutes").innerText =
+        String(minutes).padStart(2, "0");
+
+      document.getElementById("seconds").innerText =
+        String(seconds).padStart(2, "0");
+    }
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+
+    /* SHARE */
+
+    function shareWedding() {
+
+      const shareData = {
+        title: "មុន្នីរ័ត្ន ♥ វឌ្ឍនៈ",
+        text: "សូមចូលរួមក្នុងពិធីមង្គលការរបស់ មុន្នីរ័ត្ន & វឌ្ឍនៈ ❤️",
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+
+        navigator.share(shareData);
+
+      } else {
+
+        copyLink();
+
+      }
+    }
+
+
+    /* COPY LINK */
+
+    function copyLink() {
+
+      navigator.clipboard.writeText(window.location.href)
+        .then(() => {
+
+          alert("បានចម្លងតំណភ្ជាប់រួចរាល់ ❤️");
+
+        })
+        .catch(() => {
+
+          alert("សូមចម្លងតំណភ្ជាប់ពី Browser។");
+
+        });
+
+    }
+
+
+    /* ADD TO CALENDAR */
+
+    function addCalendar() {
+
+      const ics =
+`BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Muniroth Vathanak Wedding//EN
+BEGIN:VEVENT
+UID:muniroth-vathanak-wedding-2026
+DTSTAMP:20260101T000000Z
+DTSTART;TZID=Asia/Phnom_Penh:20261119T070000
+DTEND;TZID=Asia/Phnom_Penh:20261119T180000
+SUMMARY:អាពាហ៍ពិពាហ៍ មុន្នីរ័ត្ន & វឌ្ឍនៈ
+LOCATION:ភូមិអំពិលកើត ឃុំចារ ស្រុកព្រៃកប្បាស ខេត្តតាកែវ
+DESCRIPTION:Wedding Invitation - An Muniroth & Bun Vathanak
+END:VEVENT
+END:VCALENDAR`;
+
+      const blob =
+        new Blob([ics], {
+          type: "text/calendar;charset=utf-8"
+        });
+
+      const url =
+        URL.createObjectURL(blob);
+
+      const link =
+        document.createElement("a");
+
+      link.href = url;
+      link.download = "Muniroth-Vathanak-Wedding.ics";
+
+      document.body.appendChild(link);
+
+      link.click();
+
+      document.body.removeChild(link);
+
+      URL.revokeObjectURL(url);
+    }
+
+  </script>
+
+</body>
+</html>
